@@ -1,0 +1,39 @@
+@charset "UTEF-8";
+/* リセットCSS */
+
+html,body,h1,h2,h3,h4,h5,h6,p,div,
+ul,ol,li,dl,dt,dd,
+table,caption,th,td,
+form,button,label,address,blockquote,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline:0;
+	font-size: 100%;
+}
+body {
+	line-height:1;
+}
+ul {
+	list-style:none;
+}
+img,abbr {
+	border: none;
+	vertical-align: bottom;
+}
+ul,li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,td {
+	text-align: left;
+}
+button {
+    border: none;
+}

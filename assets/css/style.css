@@ -1,0 +1,149 @@
+@charset "UTEF-8";
+/* スタイルCSS */
+
+/* body
+============================== */
+body, button {
+    font-family: 'Outfit', sans-serif, "Noto Sans JP";
+    font-weight: 100;
+  }
+.jp {
+    font-size: 14px;
+    font-weight: 300;  
+  }
+
+
+
+
+/* header
+============================== */
+/* maintitle
+______________________________ */
+header {
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    position: fixed;
+    background-color: #232323;
+    color: #fff;
+}
+
+header h1 {
+    font-weight: 100;
+    font-size: 20px;
+    margin: 15px auto;
+    position: relative;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-style: italic;
+}
+
+
+/* ハンバーガーmenu
+______________________________ */
+span {
+    display: inline-block;
+}
+.navmenu2 {
+    top: 0;
+    height: 44px;
+    margin-left: 5%;
+    margin-top: 3px;
+    z-index: 300;
+    width: 44px;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* 真ん中の線 */
+.navline {
+    position: absolute;
+    right: 0;
+    left: -25px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 18px;
+    height: 0.5px;
+    background: #ffffff;
+    text-align: left;
+}
+/* 上下の線 */
+.navline::before,
+.navline::after {  
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    content: '';
+    width: 24px;
+    height: 0.5px;
+    display: block;
+    transition: transform .3s;
+    background: #ffffff;
+}
+.navline::before {
+    transform: translateY(-8px);
+}
+.navline::after {
+    transform: translateY(8px);
+}
+/* is-activeでの表示状態 */
+.is-active2 {
+    visibility: hidden;
+}
+.navline.is-active2::before,
+.navline.is-active2::after {
+    visibility: visible;
+} 
+.navline.is-active2::before {
+    transform: rotate(45deg);
+}
+.navline.is-active2::after {
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+/* main 
+============================== */
+main {
+  padding-top: 50px;
+  height: auto;
+}
+
+
+
+
+
+/* footer
+============================== */
+
+
+
+/* テスト */
+ul.categories {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+li button {
+    color: red;
+    background-color: aquamarine;
+    border-radius: 9999px;
+    border: none;
+    padding: 10px 28px;
+    cursor: pointer;
+}
+#works_gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 80px;
+    align-content: center;
+}
