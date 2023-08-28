@@ -174,9 +174,15 @@ ______________________________ */
 }
 .navpanel {/*制作中：パネルの表示非表示切り替えはコメントアウトで*/
     visibility: hidden;
+    transition: 0.6s ease-in-out;
+    transform: translateY(-50%) scale(1);
+    opacity: 0;
+
 }
 .navpanel_open { 
     visibility: visible;
+    transform: translateX(0);
+    opacity: 1.0;
 }
 /* list */
 .navpanel-inner {
@@ -196,6 +202,8 @@ ______________________________ */
 .navpanel-inner ul li a {
     text-decoration: none;
     color: #232323;
+    transition-delay: 1s ease-in-out;
+    opacity: 1;
 }
 .navpanel-inner ul li a:hover {
     cursor: pointer;
