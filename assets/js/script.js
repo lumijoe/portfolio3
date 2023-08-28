@@ -64,7 +64,6 @@ const galleryData = [
     {imageSrc: './assets/images/img3a.jpg', category: 'graphic', title: 'タイトル', description: '概要'},
     {imageSrc: './assets/images/img4a.jpg', category: 'web', title: 'タイトル', description: '概要'},
     {imageSrc: './assets/images/img5a.jpg', category: 'graphic', title: 'タイトル', description: '概要'},
-    {imageSrc: './assets/images/img6a.jpg', category: 'space', title: 'タイトル', description: '概要'},
 ];
 
 const galleryContainer = document.getElementById('works_gallery');

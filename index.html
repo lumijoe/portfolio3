@@ -30,13 +30,31 @@
     </header>
     <!-- ハンバーガーメニューパネル -->
     <div id="navpanel" class="navpanel">
-        <div>
+        <div class="navpanel-inner">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Works</li>
+                <li class="fw-300 lh-3"><a href="./index.html">HOME</a>
+                <li class="fw-300 lh-3"><a href="./about.html">ABOUT</a>
+                <li class="fw-300 lh-3"><a href="./index.html#skills_section">SKILLS</a>
+                <li class="fw-300 lh-3"><a href="./index.html#works_section">WORKS</a></li>
             </ul>
+            <div>
+                <ul class="categories pd-top-m" id="categories">
+                    <li><button id="all" class="white">All</button></li>
+                    <li><button id="web" class="white">Web</button></li>
+                    <li><button id="graphic" class="white">Graphic</button></li>
+                </ul>
+                <ul class="categories" id="categories">
+                    <li><button id="graphic" class="white">Space</button></li>
+                    <li><button id="contents" class="white">Contents</button></li>
+                </ul>
+            </div>
+            <br>
+            <div class="logo pd-top-l lh-1">
+                <div>
+                    <img src="./assets/images/img_logo.png" alt="" width="25">
+                </div>
+                <p class="fw-300">DESIGN for solution<br>PORTFOLIO</p>
+            </div>
         </div>
     </div>
 
@@ -57,19 +75,14 @@
         <ul class="categories" id="categories">
             <li><button id="all" class="white">All</button></li>
             <li><button id="web" class="white">Web</button></li>
+        </ul>
+        <ul>
             <li><button id="graphic" class="white">Graphic</button></li>
+            <li><button id="graphic" class="white">Space</button></li>
             <li><button id="contents" class="white">Contents</button></li>
         </ul>
         <br>
-        <br>
-        <img src="./assets/images/hero.jpg" alt="" width="100%">
-            1696x2884_771kb（photoshop）
-        <img src="./assets/images/hero1.jpg" alt="" width="100%">
-            700x1190 240kb（photoshop）
-        <img src="./assets/images/hero2.jpg" alt="" width="100%">
-            418x705 125kb （photoshop）
-        <img src="./assets/images/hero3.jpg" alt="" width="100%">
-            700x1190 hero3 45kb(1696x2884をmozjpgで編集)
+        
         <br>
         <br>
             <div id="works_section">
@@ -85,12 +98,6 @@
                     <li><img src="./assets/images/img3.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
                     <li><img src="./assets/images/img4.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
                     <li><img src="./assets/images/img5.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
-                    <li><img src="./assets/images/img6.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
-                    <li><img src="./assets/images/img2.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
-                    <li><img src="./assets/images/img3.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
-                    <li><img src="./assets/images/img4.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
-                    <li><img src="./assets/images/img5.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
-                    <li><img src="./assets/images/img6.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
                 </ul>
                 <h1 class="overlay-ttl-h1">PORTFOLIO</h1>
                 <p class="overlay-ttl-p">Webcoder, Designer, Planner<br><strong>DESIGN</strong> for solution</p>
@@ -118,8 +125,9 @@
     <!-- /js -->
 </body>
 <!-- z-index
-//100:header 
-//1000:menu-panel-->
+//100:header + navmenu
+//
+-->
 </html>
 
 
