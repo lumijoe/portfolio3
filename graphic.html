@@ -7,6 +7,7 @@
     <meta name="keywords" content="lumi kojo, 小城 ルミ, webdesign, coding, designer, planner, デザイン, コーディング">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
     <!-- jQuery -->
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <!-- favicon -->
     <link rel="stylesheet" type="image/png" href="">
     <link rel="stylesheet" type="image/png" href="">
@@ -21,9 +22,10 @@
 </head>
 <body>
     <!-- header -->
-    <header>
-        <h1 class="header--maintitle">LUMI KOJO</h1>
-        <button class="navmenu2" type="button"><span class="navline"></span></button>
+    <header> 
+        <div class="header-inner">
+            <h1 id="header--maintitle">LUMI KOJO</h1>
+            <button class="navmenu2" type="button"><span class="navline"></span></button>
     </header>
     <!-- /header -->
     <!-- main -->
@@ -35,6 +37,32 @@
                 <br>
             <a href="./index.html">HOMEへ</a>
         </div>
+        <div>
+            <button class="white">All</button>
+            <button class="white">Web</button>
+            <button class="white">Graphic</button>
+            <button class="white">Space</button>
+            <button class="white">Contents</button>
+        </div>
+        <br>
+        <br>
+        <section id="works_section" class="cf">
+            ::before
+            <h2 class="ttl_section">WORKS</h2>
+            <ul class="list_works">
+                <li>
+                    <p class="img_thumbnail">
+                        <a href="#">
+                            <img width="560" height="520" src="./assets/images/16001400_1.jpg" class="i" 
+                            alt srcset="./assets/images/16001400_1.jpg 560w,
+                                        ./assets/images/16001400_1.jpg 300w"
+                            sizes="(max-width:560px) 100vw, 560px">
+                        </a>
+                    </p>
+                </li>
+            </ul>
+            ::after
+        </section>
     </main>
     <!-- /main -->
 
@@ -46,6 +74,7 @@
 
     <!-- jsファイル -->
     <script src="./assets/js/script.js"></script>
+    
 
     <!-- /js -->
 </body>

@@ -5,8 +5,9 @@
     <title>LUMI KOJO 小城 ルミ</title>
     <meta name="description" content="LUMI KOJO 小城 ルミ - Webcoder, designer, planner">
     <meta name="keywords" content="lumi kojo, 小城 ルミ, webdesign, coding, designer, planner, デザイン, コーディング">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <!--●2-->
     <!-- jQuery -->
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <!-- favicon -->
     <link rel="stylesheet" type="image/png" href="">
     <link rel="stylesheet" type="image/png" href="">
@@ -21,16 +22,31 @@
 </head>
 <body>
     <!-- header -->
-    <header>
-        <h1 class="header--maintitle">LUMI KOJO</h1>
-        <button class="navmenu2" type="button"><span class="navline"></span></button>
+    <header> 
+        <div class="header-inner">
+            <h1 id="header--maintitle">LUMI KOJO</h1>
+            <button class="navmenu2" type="button"><span class="navline"></span></button>
+        </div>
     </header>
+    <!-- ハンバーガーメニューパネル -->
+    <div id="navpanel" class="navpanel">
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Skills</li>
+                <li>Works</li>
+            </ul>
+        </div>
+    </div>
+
+
     <!-- /header -->
 
     <!-- main -->
     <main>
         <div id="about_section">
-            <img src="./assets/images/16001400_1.jpg" alt="" width="100%">
+            <!-- <img src="./assets/images/16001400_1.jpg" alt="" width="100%"> -->
             <p>HTML,CSS,ABOUT</p>
             <br>
             <br>
@@ -38,12 +54,11 @@
         <div id="skiils_section">
             <h1 class="maintitle"></h1>
         </div>
-        <ul class="categories">
-            <li><button id="all">All</button></li>
-            <li><button id="web">Web</button></li>
-            <li><button id="graphic">Graphic</button></li>
-            <li><button id="space">Space</button></li>
-            <li><button id="contents">Contents</button></li>
+        <ul class="categories" id="categories">
+            <li><button id="all" class="white">All</button></li>
+            <li><button id="web" class="white">Web</button></li>
+            <li><button id="graphic" class="white">Graphic</button></li>
+            <li><button id="contents" class="white">Contents</button></li>
         </ul>
         <br>
         <br>
@@ -55,10 +70,36 @@
             418x705 125kb （photoshop）
         <img src="./assets/images/hero3.jpg" alt="" width="100%">
             700x1190 hero3 45kb(1696x2884をmozjpgで編集)
-        <div id="works_section">
+        <br>
+        <br>
+            <div id="works_section">
             <div id="works_gallery">
+                <h1>WORKS</h1>
             </div>
         </div>
+        <section class="slide_section">
+            <div class="overbg">
+                <ul class="gallery-heroitems">
+                    <li><img src="./assets/images/img1.jpg" alt="" class="gallery-heroitems-item" width="380" heigt="auto"></li>
+                    <li><img src="./assets/images/img2.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img3.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img4.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img5.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
+                    <li><img src="./assets/images/img6.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
+                    <li><img src="./assets/images/img2.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img3.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img4.jpg" alt="" class="gallery-heroitems-item"  width="380" height="auto"></li>
+                    <li><img src="./assets/images/img5.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
+                    <li><img src="./assets/images/img6.jpg" alt="" class="gallery-heroitems-item" width="380" height="auto"></li>
+                </ul>
+                <h1 class="overlay-ttl-h1">PORTFOLIO</h1>
+                <p class="overlay-ttl-p">Webcoder, Designer, Planner<br><strong>DESIGN</strong> for solution</p>
+                <div class="scroll-line">
+                    <span>SCROLL</span>
+                </div>
+            </div>
+        </section>
+        
 
     </main>
     <!-- /main -->
@@ -76,39 +117,77 @@
     <script src="./assets/js/script.js"></script>
     <!-- /js -->
 </body>
+<!-- z-index
+//100:header 
+//1000:menu-panel-->
 </html>
 
-<!-- 制作後、削除する
-・クラスtest_〇〇　実装反映テスト -->
+
+
+
+<!-- ● 制作後、削除する、最終仕上げ変更など
+・クラスtest_〇〇　実装反映テストを削除する
+・2：user-scalableを1に変更する（拡大可能：すべてのhtmlページに変更） 
+    -->
 <!-- 命名規則参考：https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470 
-    ・section>box>content>txt,img,-->
+    ・section>box>content>txt,img,
+    -->
 <!-- 変数ケース規則参考：https://www.wakuwakubank.com/posts/804-it-naming-convention/ 
     ・キャメルケース：jsの関数、変数
-    ・スネークケース：html,cssの変数、section--size_largeとか-->
+    ・スネークケース：html,cssの変数、section--size_largeとか
+    -->
+<!-- 制作要件
+        1：if________________________
+        2：swith_____________________
+        3：for or  while_____________
+        4：function(引数、戻り値)______jsファイルworks内作品取扱い、ボタン遷移、
+        5：配列 or JSON _____________jsファイルworks内作品データ管理
+        6：追加要件：オブジェクト指向 
+     -->
+<!-- UX,UI目標参考uxplanet.org
+    ・ボタン、カラー、テキストサイズ取扱：コントラスト比4.5:1目標
+    ・リンクテキスト取扱：明確化（下線、カラー）
+    ・フォント取扱：可読性向上（セリフ体、真黒字の使用不可、lign-height1.6）
+                ：例xーheightが高いlatoなど使用
+                ：大文字使用制限2ワードまで（固有名詞対象外）
+                ：weight種類制限2種類まで（コンテンツ内）
+                ：ボタン間16px（押し間違い排除のため）
+    ・アクセシビリティuserscalable1（自由拡大可能）
+    -->
 
 <!-- 0825
-        ・遷移テスト
-        ・ツリー構造構築
-        ・フッター、ヘッダー
-        ・ハンバーガー
-        ・メモ、readme, githubリポジトリ
+        OK・遷移テスト
+        OK・ツリー構造構築
+        ！・フッター、ヘッダー
+        ！・ハンバーガー
+        ×・メモ、readme, githubリポジトリ
     -->
 <!-- 0828
-        ・ワイヤーフレーム、デザインコーディング
-        ・マージンパディング余白調整
-        ・写真編集photoshop、写真差し替え
-        ・画像入れ込み
-        ・実機チェック
+        ×・手書きハンバーガーはパネルvisible実装できず→iconに変更してパネル表示を実現すること
+        ×・フッター、ヘッダーの共有jqueryうまくいかず→全ページコピペに変更
+        !・ワイヤーフレーム、デザインコーディング
+        ！・マージンパディング余白調整
+        ！写真編集photoshop、写真差し替え
+        ！・画像入れ込み
+        ！・実機チェック
     -->
 <!-- 0829
+        ！・解消デバッグ
+        ！・＠media
         ・最終コーディング
         ・調整
-        ・テキスト校正
+        ×・テキスト校正
         ・実機チェック
  -->
-<!-- 0830
+<!-- 0830:学習センター
         ・バッファ
+        ・jQueryを使用したheader,footer共通利用common.js
         ・サイト作品追加？？？
+        ×・メモ、readme, githubリポジトリ
+        ×・テキスト校正
  -->
+
+ 
+ 
 
         
