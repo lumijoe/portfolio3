@@ -1,0 +1,579 @@
+@charset "UTEF-8";
+/* スタイルCSS */
+
+/* body
+============================== */
+body, button {
+    font-family: 'Outfit', sans-serif, "Noto Sans JP";
+    font-weight: 100;
+    color: #232323;
+    line-height: 1.6;
+  }
+span.jp {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #232323;
+    line-height: 1.6;
+    
+  }
+.pd-top-s {
+    padding-top: 15px;
+}
+.pd-top-m {
+    padding-top: 30px;
+}
+.pd-top-l {
+    padding-top: 60px;
+}
+.mg-top-s {
+    padding-top: 15px;
+}
+.mg-top-m {
+    padding-top: 30px;
+}
+.mg-top-l {
+    padding-top: 60px;
+}
+
+/* flex
+______________________________ */
+.flex-co { /* 縦 */
+    display: flex;
+    flex-direction: column;
+}
+.flex-ro {
+    display: flex;
+    flex-direction: row ;
+}
+
+/* font
+______________________________ */
+/* weight */
+.fw-300 {
+    font-weight: 300;
+}
+/* lineheight */
+.lh-1 {
+    line-height: 1;
+}
+.lh-2 {
+    line-height: 2;
+}
+.lh-3 {
+    line-height: 3;
+}
+.fs-m {
+    font-size: 12px;
+}
+.fs-l {
+    font-size: 14px;
+}
+.fs-s {
+    font-size: 10px;
+}
+.fs-ttl-rl {
+    font-size: 20px;
+}
+.italic {
+    font-style: italic;
+}
+.vertical-rl {
+    writing-mode: vertical-rl;
+}
+
+/* Google Material icon
+______________________________ */
+/* code e409 右矢印 */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* button
+______________________________ */
+button + button {
+    margin-right:10px;
+    margin-top: 16px;
+}
+button:first-child {
+    margin-right: 10px;
+}
+button { 
+    padding: 3px 28px;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+button a {
+    text-decoration-line: none;
+}
+button.white {
+    background-color: rgb(255, 255, 255);
+    color: #232323;
+    font-weight: 300;
+    border: #232323 1px solid;
+    font-size: 16px;
+}
+button.white:hover {
+    background: #232323;
+    color: #ffffff;
+    border: none;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+ul.categories {
+    display: flex;
+    list-style-type: none; 
+}
+button.button-l {
+    background-color: #ffffff;
+    color: #232323;
+    border: #232323 0.7px solid;
+    text-align: left;
+    width: 140px;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+button.button-l a {
+    display: flex;
+    color: #232323;
+    align-items: center;
+    justify-content: space-between;
+}
+.button-txt {
+
+    margin-right: 45px;
+    margin-bottom: 3px; /*　要：水平中央微調整 */
+}
+
+
+/* セクション
+______________________________ */
+/* section */
+.section {
+    background-color: rgb(255, 255, 255);
+    margin: 60px 5%;
+    position: relative;
+    padding-top: 20px;
+    z-index: 0;
+}
+.section-inner {
+    background-color: rgb(255, 255, 255);
+    margin: -20px 10% 30px 10%;
+    padding-left: 9.2%;
+    padding-right: auto;
+}
+.section-ttl {
+    top:0;
+    left: 0;
+    margin: 0;
+    margin-left: -2%;
+    font-weight: 300;
+}
+.section-ttl::before {
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2.5px;
+    background-color: #de2640;
+    transform: translateY(-50%);    
+}
+.center {
+    padding-right: auto;
+    padding-left: auto;
+}
+ 
+
+
+
+
+
+
+
+/* header
+============================== */
+/* maintitle
+______________________________ */
+header {
+    width: 100%;
+    height: 52px;
+    z-index: 1000;
+    position: fixed;
+    background-color: #232323;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 100;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-style: italic;
+    margin: 0;
+}
+
+
+/* ハンバーガーmenu
+______________________________ */
+span {
+    display: inline-block;
+}
+.navmenu2 {
+    top: 0;
+    left: 0;
+    height: 44px;
+    margin-left: 5%;
+    margin-top: 3px;
+    z-index: 1000;
+    width: 44px;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* 中央線 */
+.navline {
+    position: absolute;
+    right: 0;
+    left: -25px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 18px;
+    height: 0.5px;
+    background: #ffffff;
+    text-align: left;
+}
+/* 上下線 */
+.navline::before,
+.navline::after {  
+    content: '';
+    position: absolute;
+    top: calc(50%);
+    content: '';
+    width: 24px;
+    height: 0.5px;
+    display: block;
+    transition: transform .3s;
+    background: #ffffff;
+}
+.navline::before {
+    transform: translateY(-8px);
+}
+.navline::after {
+    transform: translateY(8px);
+}
+/* is-activeでの表示状態 */
+.is-active2 {
+    visibility: hidden;
+}
+.navline.is-active2::before,
+.navline.is-active2::after {
+    visibility: visible;
+} 
+.navline.is-active2::before {
+    transform: rotate(45deg);
+}
+.navline.is-active2::after {
+    transform: rotate(-45deg);
+}
+
+/* ハンバーガーnavpanel
+______________________________ */
+/* panel */
+#navpanel {
+    z-index: 1000;
+}
+.navpanel {/*制作中：パネルの表示非表示切り替えはコメントアウトで*/
+    visibility: hidden;
+}
+.navpanel_open { 
+    visibility: visible;
+    transition: 0.6s ease-in-out;   
+}
+/* list */
+.navpanel-inner {
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-left: 8%;
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+}
+.navpanel-inner ul li {
+    font-style: italic;
+    list-style: none;
+    font-size: 20px;
+}
+.navpanel-inner ul li a {
+    text-decoration: none;
+    color: #232323;
+    transition-delay: 1s ease-in-out;
+    opacity: 1;
+}
+.navpanel-inner ul li a:hover {
+    cursor: pointer;
+    font-weight: 500;
+}
+/* logo */
+.logo {
+    display: flex;
+    font-size: 10px;
+    font-style: italic;
+    gap: 6px;
+    align-items: center;
+    line-height: 1;
+}
+
+
+
+
+
+/* main 
+============================== */
+main {
+  padding-top: 50px;
+  height: auto;
+}
+#works_section {
+    padding-top: 150px;
+
+}
+
+
+
+
+
+
+
+/* スライドギャラリー
+______________________________ */
+/* ギャラリーのスクロールと向き__横バージョン */
+.slide_section {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+ul.gallery-heroitems {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* position: absolute; */
+    animation: slide 30s infinite linear;
+}
+ul li img.gallery-heroitems-item {
+    width: auto;
+    height: 100%; /* ブラウザ画面の高さに依存 */ 
+}
+ul li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* 580px未満 
+@media (max-width: 579px) { 
+    ul li img.gallery-heroitems-item {
+        height: 100vw;
+        width: auto;
+    }
+    section.slide_section ul,
+    section.slide_section ul li {
+        height: 100vw;
+        width: auto;
+    }
+}*/
+/* 580px以上850px未満849px height40vw */
+@media (min-width: 580px) and (max-width: 849px) { 
+    ul li img.gallery-heroitems-item {
+        height: 40vw;
+        width: auto;
+    }
+    section.slide_section ul,
+    section.slide_section ul li {
+        height: 40vw;
+        width: auto;
+    }
+    ul.gallery-heroitems {
+        animation: slide s infinite linear;
+    }
+}
+/* 850px以上 height60vw */
+@media (min-width: 850px) {
+    ul.heroitems li img.gallery-heroitems-item {
+        height: 60vw;
+        width: auto;
+    }
+    section.slide_section ul,
+    section.slide_section ul li {
+        height: 60vw;
+        width: auto;
+    }
+}
+/* スライドショー、オーバーレイ、テキスト */
+section.slide_section div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 27, 41, 0.68);
+    z-index: 300;
+}
+div.overbg::after { /*::afterがないとスピード増す*/
+    position: relative;
+    display: inline-block;
+}
+.overlay-ttl-h1 {
+    position: absolute;
+    top: 40vw;
+    left: -28vw;
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    z-index: 700;
+    transform: rotate(90deg);
+    font-size: 13vw;
+}
+.overlay-ttl-p {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    padding-top: 0px;
+    z-index: 700;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    font-style: italic;
+}
+.scroll-line {
+    position: absolute;
+    z-index: 700;
+    color: white;
+    right: 5%;
+    bottom: 0px;
+    width: 1px;
+    height: 300px;
+    background-color: rgba(10, 27, 41, 0.68);
+    transition: all 1.4s;
+}
+.scroll-line span{
+    position: absolute;
+    top: -70px;
+    left: -8px;
+    font-size: 10px;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    transform-origin: left bottom ;
+    writing-mode: vertical-rl;
+    vertical-align: top;
+}
+.scroll-line::after {
+    z-index: 700;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 1px;
+    background: white;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-name: lineFlow;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-timeline: auto;
+}
+
+@keyframes lineFlow {
+    0% {
+        bottom: 100%;
+        height: 0%;
+    }
+    20% {
+        bottom: 0%;
+        height: 100%;  
+    }
+    40% {
+        bottom: 0%;
+        height: 0%;
+    }
+    100% {
+        bottom: 0%;
+        height: 0%;
+    }
+}
+
+/* slide_section2 */
+.slide_section2 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.gallery-heroitems2 {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+.gallery-heroitems-item2 {
+    object-fit: cover;
+} 
+
+
+/* ABOUT 
+______________________________ */
+
+
+/* minislide
+______________________________ */
+#section-minislide {
+    padding-bottom: 60px;
+}
+.slide-container {
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+/* footer
+============================== */
+
+
+
+/* テスト
+============================== */
+
+#works_gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 80px;
+    align-content: center;
+    overflow: hidden;
+}
