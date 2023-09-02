@@ -14,8 +14,8 @@ time, mark, audio, video, button {
 	outline:0;
 	font-size: 100%;
 }
-body {
-	line-height:1;
+a {
+	text-decoration: none;
 }
 ul {
 	list-style:none;

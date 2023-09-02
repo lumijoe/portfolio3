@@ -92,100 +92,10 @@ ______________________________ */
   'opsz' 48
 }
 
-/* button
-______________________________ */
-button + button {
-    margin-right:10px;
-    margin-top: 16px;
-}
-button:first-child {
-    margin-right: 10px;
-}
-button { 
-    padding: 3px 28px;
-    border-radius: 9999px;
-    cursor: pointer;
-    text-decoration-line: none;
-}
-button a {
-    text-decoration-line: none;
-}
-button.white {
-    background-color: rgb(255, 255, 255);
-    color: #232323;
-    font-weight: 300;
-    border: #232323 1px solid;
-    font-size: 16px;
-}
-button.white:hover {
-    background: #232323;
-    color: #ffffff;
-    border: none;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-}
-ul.categories {
-    display: flex;
-    list-style-type: none; 
-}
-button.button-l {
-    background-color: #ffffff;
-    color: #232323;
-    border: #232323 0.7px solid;
-    text-align: left;
-    width: 140px;
-    border-radius: 9999px;
-    cursor: pointer;
-}
-button.button-l a {
-    display: flex;
-    color: #232323;
-    align-items: center;
-    justify-content: space-between;
-}
-.button-txt {
-
-    margin-right: 45px;
-    margin-bottom: 3px; /*　要：水平中央微調整 */
-}
 
 
-/* セクション
-______________________________ */
-/* section */
-.section {
-    background-color: rgb(255, 255, 255);
-    margin: 60px 5%;
-    position: relative;
-    padding-top: 20px;
-    z-index: 0;
-}
-.section-inner {
-    background-color: rgb(255, 255, 255);
-    margin: -20px 10% 30px 10%;
-    padding-left: 9.2%;
-    padding-right: auto;
-}
-.section-ttl {
-    top:0;
-    left: 0;
-    margin: 0;
-    margin-left: -2%;
-    font-weight: 300;
-}
-.section-ttl::before {
-    top: 0;
-    left: 0;
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 2.5px;
-    background-color: #de2640;
-    transform: translateY(-50%);    
-}
-.center {
-    padding-right: auto;
-    padding-left: auto;
-}
+
+
  
 
 
@@ -198,10 +108,9 @@ ______________________________ */
 ============================== */
 /* maintitle
 ______________________________ */
-header {
+.header-inner {
     width: 100%;
     height: 52px;
-    z-index: 1000;
     position: fixed;
     background-color: #232323;
     color: #fff;
@@ -226,7 +135,7 @@ ______________________________ */
 span {
     display: inline-block;
 }
-.navmenu2 {
+.navmenu {
     top: 0;
     left: 0;
     height: 44px;
@@ -273,7 +182,7 @@ span {
 .navline::after {
     transform: translateY(8px);
 }
-/* is-activeでの表示状態 */
+/* isOnでの表示状態 */
 .is-active2 {
     visibility: hidden;
 }
@@ -292,74 +201,41 @@ span {
 ______________________________ */
 /* panel */
 #navpanel {
-    z-index: 1000;
+    position: fixed;
+    margin-top: 52px;
+    
 }
 .navpanel {/*制作中：パネルの表示非表示切り替えはコメントアウトで*/
     visibility: hidden;
 }
 .navpanel_open { 
     visibility: visible;
-    transition: 0.6s ease-in-out;   
+    transition: 0.8s ease; 
+    transform: translateX(100%); 
+    z-index: 700;
 }
-/* list */
 .navpanel-inner {
-    background-color: rgb(255, 255, 255);
-    padding-top: 100px;
-    padding-left: 8%;
-    position: fixed;
-    width: 80%;
+    background-color: aqua;
+    width: 80vw;
     height: 100vh;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-}
-.navpanel-inner ul li {
-    font-style: italic;
-    list-style: none;
-    font-size: 20px;
-}
-.navpanel-inner ul li a {
-    text-decoration: none;
-    color: #232323;
-    transition-delay: 1s ease-in-out;
-    opacity: 1;
-}
-.navpanel-inner ul li a:hover {
-    cursor: pointer;
-    font-weight: 500;
-}
-/* logo */
-.logo {
-    display: flex;
-    font-size: 10px;
-    font-style: italic;
-    gap: 6px;
-    align-items: center;
-    line-height: 1;
+    transform: translateX(-100%);
 }
 
-
-
-
-
-
-/* main 
-============================== */
-main {
-  padding-top: 50px;
-  height: auto;
-}
-#works_section {
-    padding-top: 150px;
-
-}
-
-
-
-
-
-
-
-/* スライドギャラリー
+/* main
 ______________________________ */
+main {
+    padding-top: 52px;
+
+}
+section.slide_section div::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(10, 27, 41, 0.68);
+}
 /* ギャラリーのスクロールと向き__横バージョン */
 .slide_section {
     width: 100%;
@@ -393,20 +269,6 @@ ul li {
         transform: translateX(-100%);
     }
 }
-
-
-/* 580px未満 
-@media (max-width: 579px) { 
-    ul li img.gallery-heroitems-item {
-        height: 100vw;
-        width: auto;
-    }
-    section.slide_section ul,
-    section.slide_section ul li {
-        height: 100vw;
-        width: auto;
-    }
-}*/
 /* 580px以上850px未満849px height40vw */
 @media (min-width: 580px) and (max-width: 849px) { 
     ul li img.gallery-heroitems-item {
@@ -434,17 +296,7 @@ ul li {
         width: auto;
     }
 }
-/* スライドショー、オーバーレイ、テキスト */
-section.slide_section div::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10, 27, 41, 0.68);
-    z-index: 300;
-}
+
 div.overbg::after { /*::afterがないとスピード増す*/
     position: relative;
     display: inline-block;
@@ -531,6 +383,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     }
 }
 
+
 /* slide_section2 */
 .slide_section2 {
     width: 100%;
@@ -546,37 +399,3 @@ div.overbg::after { /*::afterがないとスピード増す*/
 .gallery-heroitems-item2 {
     object-fit: cover;
 } 
-
-
-/* ABOUT 
-______________________________ */
-
-
-/* minislide
-______________________________ */
-#section-minislide {
-    padding-bottom: 60px;
-}
-.slide-container {
-    display: flex;
-    overflow: hidden;
-}
-
-
-
-/* footer
-============================== */
-
-
-
-/* テスト
-============================== */
-
-#works_gallery {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 80px;
-    align-content: center;
-    overflow: hidden;
-}

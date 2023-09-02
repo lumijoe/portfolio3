@@ -1,25 +1,28 @@
 'use strict';
 
 //ハンバーガーmenu
-//navmenu2
+//navmenu2修正0902
+
 const navBtn2 = document.querySelector('.navmenu2');
-const navPanel = document.getElementById('navpanel'); // id を指定する
+const navPanel = document.getElementById('navpanel');
+const navLine = document.querySelector('.navline');
 
-navBtn2.addEventListener("click", function() {
-if (navBtn2.classList.contains("is-active2")) {
-      navBtn2.classList.remove("is-active2");
-      navPanel.classList.remove('navpanel_open');
-      navPanel.classList.add('navpanel_close');
-
-  } else {
-    navBtn2.classList.add("is-active2");
-    navPanel.classList.add('navpanel_open');
-    /*navPanel.classList.remove('navpanel');*/
-  }
-
-  const navLine = document.querySelector('.navline');
-  navLine.classList.toggle("is-active2");
+navBtn2.addEventListener('click', function() {
+    navBtn2.focus();
+    navLine.classList.toggle('is-active2');
+    if (navLine.classList.contains('is-active2')) {
+        navPanel.classList.add('navpanel_open');
+    } else {
+        navPanel.classList.remove('navpanel_open');
+    }
 });
+//アクセシビリティ
+function toggleFocus(keyboard) {
+    keyboard.style.backgroundColor =  keyboard.style.backgroundColor=="rgba(255, 255, 255, 0.3)" ? "inherit" : "rgba(255, 255, 255, 0.3)"; 
+}
+
+
+
 
 
 
