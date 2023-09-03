@@ -5,7 +5,7 @@
     <title>LUMI KOJO 小城 ルミ</title>
     <meta name="description" content="LUMI KOJO 小城 ルミ - Webcoder, designer, planner">
     <meta name="keywords" content="lumi kojo, 小城 ルミ, webdesign, coding, designer, planner, デザイン, コーディング">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <!--●2-->
     <!-- jQuery -->
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
     <!-- favicon -->
@@ -13,72 +13,190 @@
     <link rel="stylesheet" type="image/png" href="">
     <!-- cssファイル -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/categories.css">
     <!-- font↓ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Outfit:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    
     <!-- header -->
     <header> 
+        <!-- グローバルナビゲーション -->
         <div class="header-inner">
+            <button class="navmenu" type="button" tabindex="0" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+                <span class="navline"></span>
+            </button>
             <h1 id="header--maintitle">LUMI KOJO</h1>
-            <button class="navmenu2" type="button"><span class="navline"></span></button>
+        </div>
+        <!-- セクション（ナビパネル） -->
+        <div id="navpanel" class="navpanel">
+            <div class="navpanel-inner">
+                <ul>
+                    <li class="fw-300 lh-3"><a href="./index.html">HOME</a>
+                    <li class="fw-300 lh-3"><a href="./about.html">ABOUT</a>
+                    <li class="fw-300 lh-3"><a href="./index.html#skills_section">SKILLS</a>
+                    <li class="fw-300 lh-3"><a href="./index.html#works_section">WORKS</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <!-- /header -->
-    <!-- main -->
-    <main>
-        <div id="graphic_page">
-            <img src="./assets/images/hero3.jpg" alt="" width=100%>
-            <h1>Graphic</h1>
-                <br>
-                <br>
-            <a href="./index.html">HOMEへ</a>
-        </div>
-        <div>
-            <button class="white">All</button>
-            <button class="white">Web</button>
-            <button class="white">Graphic</button>
-            <button class="white">Space</button>
-            <button class="white">Contents</button>
-        </div>
-        <br>
-        <br>
-        <section id="works_section" class="cf">
-            ::before
-            <h2 class="ttl_section">WORKS</h2>
-            <ul class="list_works">
-                <li>
-                    <p class="img_thumbnail">
-                        <a href="#">
-                            <img width="560" height="520" src="./assets/images/16001400_1.jpg" class="i" 
-                            alt srcset="./assets/images/16001400_1.jpg 560w,
-                                        ./assets/images/16001400_1.jpg 300w"
-                            sizes="(max-width:560px) 100vw, 560px">
-                        </a>
-                    </p>
-                </li>
-            </ul>
-            ::after
+
+    <!-- main -->    
+    <main id="layout-main">
+        <!-- セクション（ヒーロースライド） -->
+        <section class="slide_section">
+            <div class="overbg">
+                <ul class="gallery-heroitems">
+                    <!-- 編集：dev1000x1334ss→ps1000x1334→mozjpgQuo92Da170kb/ -->
+                    <!-- 編集：xd418x295@4→ps1000x1334→mozjpgQ85~92Da170kb/ -->
+                    <li><img src="./assets/images/img_hero_ss1000_psmoz.jpg" alt="" class="gallery-heroitems-item"  width="auto"></li>
+                    <li><img src="./assets/images/img_work02.jpg" alt="" class="gallery-heroitems-item"  width="" height="auto"></li>
+                    <li><img src="./assets/images/img_work04.jpg" alt="" class="gallery-heroitems-item" width="" height="auto"></li>
+                    <li><img src="./assets/images/img1.jpg" alt="" class="gallery-heroitems-item" width="" height="auto"></li>
+                    <li><img src="./assets/images/img2.jpg" alt="" class="gallery-heroitems-item"  width="" height="auto"></li>
+                    <li><img src="./assets/images/img3.jpg" alt="" class="gallery-heroitems-item"  width="" height="auto"></li>   
+                </ul>
+                <h1 class="overlay-ttl-h1">PORTFOLIO</h1>
+                <p class="overlay-ttl-p">Webcoder, Designer, Planner<br><strong>DESIGN</strong> for solution</p>
+                <div class="scroll-line">
+                    <span>SCROLL</span>
+                </div>
+            </div>
         </section>
+        <!-- セクション（ABOUT） -->
+        <section id="about-section" class="mg-top-ll">
+            <div class="section-contents">
+                <h2 class="section-contents-ttl vertical-rl">ABOUT</h2>
+                <div class="section-contents-txt fadeup-one">
+                    <p class="about-txt fs-m lh-3">地域や人が明るくなるデザインを<br>プランニングから手がけてきました。<br>グラフィックからWebに転向<br>JavaScriptで動きのあるサイト制作も対応します。</p>
+                    <br>
+                    <div class="button-container fadeup-two">
+                        <button class="button-more">
+                            <a href="./about.html" class=>
+                                <span class="button-txt fs-m italic fw-300">more</span>
+                                <span><img src="./assets/images/icon_right2.svg" alt="" width="25"></span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- section_minislide -->
+            <div id="section-minislide"> <!--スライドに修正すること-->
+                <div class="slide-container">
+                    <img src="./assets/images/imgscroll.jpg" alt="" width="500">
+                    <img src="./assets/images/imgscroll.jpg" alt="" width="500">
+                    <img src="./assets/images/imgscroll.jpg" alt="" width="500">
+                </div>
+             </div>
+        <!-- /section_minislide -->
+        </section>
+        <!-- セクション（ABOUT） -->
+        <section id="skills-section" class="mg-top-ll">
+            <div class="section-contents">
+                <h2 class="section-contents-ttl vertical-rl">SKILLS</h2>
+                <div class="section-contents-txt">
+                    <p class="about-txt fs-m">地域や人が明るくなるデザインを<br>プランニングから手がけてきました。<br><br>グラフィックからWebに転向<br>JavaScriptで動きのあるサイト制作も対応します。</p>
+                    <br>
     </main>
     <!-- /main -->
-
     <!-- footer -->
     <footer>
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores a consequuntur eius. Iusto, itaque quisquam! Recusandae veniam repudiandae nemo ad tempore facere laudantium facilis deserunt, voluptatem modi, nostrum deleniti tenetur!
+        Ex velit consequuntur, labore incidunt eius asperiores alias beatae vitae dignissimos sit accusantium at, fugit nulla veniam debitis ducimus enim assumenda obcaecati? Mollitia quidem delectus recusandae reiciendis qui, nisi aperiam.
+        Sapiente veniam corrupti, illum consequuntur aliquid nulla aperiam culpa debitis excepturi consequatur aliquam harum, sunt et. Sit error quia animi. Ipsum impedit eius beatae, quod repudiandae fuga expedita repellat velit.
+        Inventore quod similique dicta distinctio accusamus vero amet at, iusto minima. Illo, itaque sit dolor iste numquam sapiente magnam tempore consectetur aliquam labore distinctio ducimus neque assumenda minima deserunt consequuntur?
+        Placeat nostrum consequuntur nam illum tempore, delectus temporibus asperiores porro officiis totam ea quis, facere quaerat animi officia repellendus accusantium ullam eligendi veniam ipsam facilis molestias sapiente! Amet, ipsa neque!
+        Nisi velit aliquam facilis sapiente fugiat amet obcaecati, hic quia error, voluptate cum molestias placeat cupiditate quam excepturi? Deserunt pariatur blanditiis saepe. Dignissimos provident cupiditate, a doloribus amet adipisci expedita?
+        Aspernatur, distinctio ab? Reprehenderit facere ipsam velit fuga, in maiores! Illum maxime, cupiditate eius alias quas quibusdam aliquam amet ratione deleniti quasi ex iste vel. Sit deserunt reiciendis error numquam.
+        Ipsum sed distinctio omnis et autem eligendi quas iure molestiae voluptates perspiciatis provident, beatae natus officiis. Temporibus minus maiores obcaecati, amet exercitationem ipsum fugiat dolore dolorum vel maxime consectetur nulla.
+        Laborum, nihil. Expedita quis dignissimos laborum placeat tempore laudantium esse soluta atque voluptate commodi? Libero odio, iusto vel eum aliquam saepe nisi nesciunt nostrum repudiandae atque, corporis eligendi tenetur deleniti.
+        Recusandae ea dicta ut maxime ratione ad error minus deserunt, consequatur commodi dolore deleniti qui ipsam? Repellat laborum mollitia, voluptates libero quia magnam nesciunt cupiditate veritatis cumque ab aperiam. Ad.
+        Ea repellat sint fuga. Molestias ratione ullam voluptatem nostrum, aut ea dolores laudantium numquam incidunt perspiciatis aperiam inventore quisquam alias praesentium placeat distinctio porro mollitia officia ducimus. Voluptatum, impedit iste?
+        Consequuntur beatae eveniet dolor aliquid obcaecati hic molestias tempore quod assumenda maiores dignissimos unde quidem, quia in. Suscipit veritatis adipisci aliquam, velit ab voluptatum perferendis doloremque animi nam deleniti deserunt!</h1>
         
     </footer>
     <!-- /footer -->
 
     <!-- jsファイル -->
-    <script src="./assets/js/script.js"></script>
-    
-
+    <script src="./assets/js/categories.js"></script>
     <!-- /js -->
 </body>
+<!-- z-index
+//100:header + navmenu
+//
+-->
 </html>
 
-<!-- 制作後、削除する
-・クラスtest_〇〇　実装反映テスト -->
+
+
+
+<!-- ● 制作後、削除する、最終仕上げ変更など
+・クラスtest_〇〇　実装反映テストを削除する
+・2：user-scalableを1に変更する（拡大可能：すべてのhtmlページに変更） 
+    -->
+<!-- 命名規則参考：https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470 
+    ・section>box>content>txt,img,
+    -->
+<!-- 変数ケース規則参考：https://www.wakuwakubank.com/posts/804-it-naming-convention/ 
+    ・キャメルケース：jsの関数、変数
+    ・スネークケース：html,cssの変数、section--size_largeとか
+    -->
+<!-- 制作要件
+        1：if________________________
+        2：swith_____________________
+        3：for or  while_____________
+        4：function(引数、戻り値)______jsファイルworks内作品取扱い、ボタン遷移、
+        5：配列 or JSON _____________jsファイルworks内作品データ管理
+        6：追加要件：オブジェクト指向 
+     -->
+<!-- UX,UI目標参考uxplanet.org
+    ・ボタン、カラー、テキストサイズ取扱：コントラスト比4.5:1目標
+    ・リンクテキスト取扱：明確化（下線、カラー）
+    ・フォント取扱：可読性向上（セリフ体、真黒字の使用不可、lign-height1.6）
+                ：例xーheightが高いlatoなど使用
+                ：大文字使用制限2ワードまで（固有名詞対象外）
+                ：weight種類制限2種類まで（コンテンツ内）
+                ：ボタン間16px（押し間違い排除のため）
+    ・アクセシビリティuserscalable1（自由拡大可能）
+    -->
+
+<!-- 0825
+        OK・遷移テスト
+        OK・ツリー構造構築
+        ！・フッター、ヘッダー
+        ！・ハンバーガー
+        ×・メモ、readme, githubリポジトリ
+    -->
+<!-- 0828
+        ×・手書きハンバーガーはパネルvisible実装できず→iconに変更してパネル表示を実現すること
+        ×・フッター、ヘッダーの共有jqueryうまくいかず→全ページコピペに変更
+        !・ワイヤーフレーム、デザインコーディング
+        ！・マージンパディング余白調整
+        ！写真編集photoshop、写真差し替え
+        ！・画像入れ込み
+        ！・実機チェック
+    -->
+<!-- 0829
+        ！・解消デバッグ
+        ！・＠media
+        ・最終コーディング
+        ・調整
+        ×・テキスト校正
+        ・実機チェック
+ -->
+<!-- 0830:学習センター
+        ・バッファ
+        ・jQueryを使用したheader,footer共通利用common.js
+        ・サイト作品追加？？？
+        ×・メモ、readme, githubリポジトリ
+        ×・テキスト校正
+ -->
+
+ 
+ 
+
+        
