@@ -425,25 +425,25 @@ div.overbg::after { /*::afterがないとスピード増す*/
 }
 .fadeup-one {
     animation-name:fadeUpAnime;
-    animation-duration:1.5s;
+    animation-duration:2.8s;
     animation-fill-mode:forwards;
     opacity:0;
 }      
 .fadeup-two {
     animation-name:fadeUpAnime;
-    animation-duration:2.8s;
+    animation-duration:3.8s;
     animation-fill-mode:forwards;
     opacity:0;
 }           
 .animate-fadeup-one {
     animation-name: fadeUpAnimeOne;
-    animation-duration: 1.5s;
+    animation-duration: 2.8s;
     animation-fill-mode: forwards;
 }
 
 .animate-fadeup-two {
     animation-name: fadeUpAnimeTwo;
-    animation-duration: 2.8s;
+    animation-duration: 3.8s;
     animation-fill-mode: forwards;
 }
 
