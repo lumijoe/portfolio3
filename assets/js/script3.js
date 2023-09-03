@@ -24,7 +24,7 @@ function toggleFocus(keyboard) {
 
 //スライド速度
 document.addEventListener("DOMContentLoaded", function() {
-    const slideDuration = 30000; // 表示時間（ms）10m
+    const slideDuration = 60000; // 表示時間（ms）10m
   
     const gallery = document.querySelector('.gallery-heroitems');
     const item = gallery.querySelectorAll('.gallery-heroitems-item');
