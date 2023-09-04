@@ -328,7 +328,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
 .overlay-ttl-p {
     position: absolute;
     top: 70%;
-    left: -7.8%;
+    left: 5%;
     padding-top: 0px;
     z-index: 100;
     color: white;
@@ -430,7 +430,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     margin:  75px 15% 0px;
 }
 .wb-keepall {
-    word-break: keepall;
+    word-break: keep-all;
 }
 .fadeup-one {
     animation-name:fadeUpAnime;
