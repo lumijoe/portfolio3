@@ -328,7 +328,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
 .overlay-ttl-p {
     position: absolute;
     top: 70%;
-    left: 5%;
+    left: -7.8%;
     padding-top: 0px;
     z-index: 100;
     color: white;
@@ -336,7 +336,6 @@ div.overbg::after { /*::afterがないとスピード増す*/
     letter-spacing: 0.08em;
     font-style: italic;
     transform: rotate(90deg);
-    transform: left bottom;
 }
 .scroll-line {
     position: absolute;
