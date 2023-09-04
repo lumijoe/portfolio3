@@ -85,9 +85,9 @@ ______________________________ */
     font-size: 10px;
 }
 .section-contents-ttl {
-    font-size: 20px;
+    font-size: 24px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
 }
 .italic {
     font-style: italic;
@@ -416,7 +416,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     background-color: #DE2640;
 }
 .section-contents-ttl {
-    padding-top: 20px;
+    padding-top: 24px;
     /* ttlサイズに依存 */
     line-height: 1em;
 }
