@@ -336,6 +336,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     letter-spacing: 0.08em;
     font-style: italic;
     transform: rotate(90deg);
+    transform-origin: left bottom;
 }
 .scroll-line {
     position: absolute;
