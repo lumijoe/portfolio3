@@ -312,19 +312,23 @@ div.overbg::after { /*::afterがないとスピード増す*/
 }
 .overlay-ttl-h1 { /* PORTFOLIO */
     position: absolute;
-    top: 30%;
-    left: -30%;
+    top: 1%;
+    left: 5%;
     font-style: italic;
     font-weight: 300;
     color: white;
     z-index: 100;
     transform: rotate(90deg);
+    transform-origin: left bottom;
     font-size: 15vw;
+    margin: 0 !important;
+    line-height: 0.75 !important;
+    vertical-align: sub;
 }
 .overlay-ttl-p {
     position: absolute;
-    top: 75%;
-    left: -5%;
+    top: 70%;
+    left: 5%;
     padding-top: 0px;
     z-index: 100;
     color: white;
@@ -332,6 +336,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     letter-spacing: 0.08em;
     font-style: italic;
     transform: rotate(90deg);
+    transform: left bottom;
 }
 .scroll-line {
     position: absolute;
