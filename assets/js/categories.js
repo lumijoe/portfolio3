@@ -52,20 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //対象要素を取得
 const fadeUpOne = document.querySelector('.fadeup-one');
 const fadeUpTwo = document.querySelector('.fadeup-two');
-
-/*スクロールを監視する関数を定義
-function checkScroll() {
-//スクロール位置を取得
-const scrollPosition = window.scrollY;
-//スクロール位置Yが700px以上になったらアニメーションを開始
-if (scrollPosition >= 500) {
-    fadeUpOne.classList.add('animate-fadeup-one');
-    fadeUpTwo.classList.add('animate-fadeup-two');
-}
-}
-//ウィンドウのスクロールイベントに監視イベント関数を組込
-window.addEventListener('scroll', checkScroll);*/
-
 //表示を監視する関数の定美
 const observer = new IntersectionObserver((entires, observer) => {
     entires.forEach(entry => {
@@ -78,5 +64,34 @@ const observer = new IntersectionObserver((entires, observer) => {
 //監視したい要素の指定
 observer.observe(fadeUpOne);
 observer.observe(fadeUpTwo);
+
+
+//横スクロール
+const slideContainer = document.querySelector('.slide-container');
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+slideContainer.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - slideContainer.offsetLeft;
+    scrollLeft = slideContainer.scrollLeft;
+});
+
+slideContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+slideContainer.addEventListener('mouseleave', () => {
+    isDragging = false;
+});
+
+slideContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - slideContainer.offsetLeft;
+    const walk = (x - startX) * 1; // スクロール速度調整
+    slideContainer.scrollLeft = scrollLeft - walk;
+});
 
 

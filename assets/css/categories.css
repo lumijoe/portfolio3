@@ -507,6 +507,10 @@ button {
     text-align: left;
     width: 140px;
 }
+.button-more:hover {
+    transform: translateX(3px);
+    border-left: 3px solid #232323 ;
+}
 .button-more a {
     display: flex;
     color: #232323;
@@ -517,16 +521,29 @@ span.button-txt {
     margin-right: 35px;
     margin-bottom: 3px;
 }
+img.icon_right {
+    margin-left: 10px;
+}
 
 
 /* minislide
 ______________________________ */
 #section-minislide {
     margin-top: 120px;
+    display: flex;
+    
 }
 .slide-container {
     display: flex;
     overflow: hidden;
+    overflow-x: scroll;
+    cursor: grab;
+}
+.slide-container::-webkit-scrollbar {
+    display: none;
+}
+.slide-container:active {
+    cursor: grabbing;
 }
 .skills-txt {
     display: flex;
