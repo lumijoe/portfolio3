@@ -85,9 +85,9 @@ ______________________________ */
     font-size: 10px;
 }
 .section-contents-ttl {
-    font-size: 24px;
+    font-size: 20px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
 }
 .italic {
     font-style: italic;
@@ -311,6 +311,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     display: inline-block;
 }
 .overlay-ttl-h1 { /* PORTFOLIO */
+    /* 下付き文字回転軸左下 */
     position: absolute;
     top: 1%;
     left: 5%;
@@ -328,15 +329,18 @@ div.overbg::after { /*::afterがないとスピード増す*/
 .overlay-ttl-p {
     position: absolute;
     top: 70%;
-    left: 5%;
-    padding-top: 0px;
-    z-index: 100;
-    color: white;
-    font-size: 12px;
-    letter-spacing: 0.08em;
+    left: 7.3%;
     font-style: italic;
+    color: white;
+    z-index: 100;
     transform: rotate(90deg);
     transform-origin: left bottom;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin: 0 !important;
+    line-height: 1.1 !important;
+    vertical-align: sub;
+    
 }
 .scroll-line {
     position: absolute;
@@ -410,9 +414,6 @@ div.overbg::after { /*::afterがないとスピード増す*/
     position: relative;
     display: flex;
 }
-span.wb {
-    word-break: keep-all;
-}
 .section-contents-ttl::before {
     content: "";
     position: absolute;
@@ -424,17 +425,27 @@ span.wb {
     background-color: #DE2640;
 }
 .section-contents-ttl {
-    padding-top: 24px;
+    padding-top: 20px;
+    font-weight: 400;
     /* ttlサイズに依存 */
     line-height: 1em;
 }
-.section-contents-txt {
+span.wb{
+    word-break: keep-all;
+}
+/* セクションテキストエリア（タイト） */
+.section-contents-txt-tight {
     background-color: rgb(255, 255, 255);
-    margin:  75px 13% 0px;
+    margin:  75px 15% 0px;
+}
+/* セクションテキストエリア（ワイド） */
+.section-contents-txt-wide {
+    background-color: rgb(255, 255, 255);
+    margin:  75px 10% 0px;
 }
 .fadeup-one {
     animation-name:fadeUpAnime;
-    animation-duration:3.8s;
+    animation-duration:2.8s;
     animation-fill-mode:forwards;
     opacity:0;
 }      
@@ -446,7 +457,7 @@ span.wb {
 }           
 .animate-fadeup-one {
     animation-name: fadeUpAnimeOne;
-    animation-duration: 3.8s;
+    animation-duration: 2.8s;
     animation-fill-mode: forwards;
 }
 
@@ -517,6 +528,27 @@ ______________________________ */
     display: flex;
     overflow: hidden;
 }
+.skills-txt {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+}
+
+/* セクション（SKILLS） */
+#skills-section {
+    background-color: aquamarine;
+}
+.skills-txt li::after {
+    content: " /";
+}
+.section-contents-cards {
+    background-color: rgb(168, 145, 145);
+}
+#skills-card {
+    background-color: aqua;
+}
+
+
 
 
 
