@@ -434,7 +434,7 @@ span.wb {
 }
 .fadeup-one {
     animation-name:fadeUpAnime;
-    animation-duration:2.8s;
+    animation-duration:3.8s;
     animation-fill-mode:forwards;
     opacity:0;
 }      
@@ -446,7 +446,7 @@ span.wb {
 }           
 .animate-fadeup-one {
     animation-name: fadeUpAnimeOne;
-    animation-duration: 2.8s;
+    animation-duration: 3.8s;
     animation-fill-mode: forwards;
 }
 
