@@ -429,9 +429,6 @@ div.overbg::after { /*::afterがないとスピード増す*/
     background-color: rgb(255, 255, 255);
     margin:  75px 15% 0px;
 }
-.wb-keepall {
-    word-break: keep-all;
-}
 .fadeup-one {
     animation-name:fadeUpAnime;
     animation-duration:2.8s;
