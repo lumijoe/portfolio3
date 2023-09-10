@@ -21,8 +21,7 @@ span.jp {
     font-weight: 300;
     color: #232323;
     line-height: 1.6;
-    
-  }
+}
 .pd-top-s {
     padding-top: 15px;
 }
@@ -321,7 +320,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     z-index: 100;
     transform: rotate(90deg);
     transform-origin: left bottom;
-    font-size: 15vw;
+    font-size: clamp(54px, 15vw, 70px);
     margin: 0 !important;
     line-height: 0.75 !important;
     vertical-align: sub;
@@ -529,13 +528,10 @@ img.icon_right {
 /* minislide
 ______________________________ */
 #section-minislide {
-    margin-top: 120px;
-    display: flex;
-    
+    margin-top: 75px;    
 }
 .slide-container {
     display: flex;
-    overflow: hidden;
     overflow-x: scroll;
     cursor: grab;
 }
@@ -545,13 +541,14 @@ ______________________________ */
 .slide-container:active {
     cursor: grabbing;
 }
+
+
+/* セクション（SKILLS） */
 .skills-txt {
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255); 
 }
-
-/* セクション（SKILLS） */
 #skills-section {
     background-color: aquamarine;
 }
