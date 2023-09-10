@@ -425,7 +425,7 @@ div.overbg::after { /*::afterがないとスピード増す*/
     background-color: #DE2640;
 }
 .section-contents-ttl {
-    padding-top: 20px;
+    padding-top: 24px;
     font-weight: 400;
     /* ttlサイズに依存 */
     line-height: 1em;
