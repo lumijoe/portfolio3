@@ -403,12 +403,12 @@ div.overbg::after { /*::afterがないとスピード増す*/
 
 /* セクション（ABOUT) */
 #about-section {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(130, 148, 198);
     height: auto;
 }
 .section-contents {
     margin: 0 5%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(185, 147, 147);
     height: auto;
     position: relative;
     display: flex;
@@ -550,17 +550,49 @@ ______________________________ */
     background-color: rgb(255, 255, 255); 
 }
 #skills-section {
-    background-color: aquamarine;
+    background-color: rgb(216, 243, 235);
 }
 .skills-txt li::after {
     content: " /";
 }
-.section-contents-cards {
-    background-color: rgb(168, 145, 145);
+.wb-all {
+    word-break: keep-all;
 }
-#skills-card {
-    background-color: aqua;
+.softskills-cards {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    background-color: aquamarine;
 }
+.softskills-card {
+    padding-top: 42px;
+    height: 79px;
+    width: auto;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    padding:5%;
+}
+.softskills-card:first-child {
+    padding-top: 0px;
+}
+.intro-img  {
+    width: 63px;
+}
+.card-intro {
+    display: flex;
+    flex-direction: row;
+}
+.intro-ttl {
+    width: 170px;
+    vertical-align: center;
+}
+.intro-icon {
+    padding-right: 30px;
+}
+
+
+
+
 
 
 
