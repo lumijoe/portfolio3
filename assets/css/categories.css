@@ -404,12 +404,12 @@ div.overbg::after { /*::afterがないとスピード増す*/
 /* section_ABOUT
 ============================== */
 #about-section {
-    background-color: rgb(130, 148, 198);
+    background-color: rgb(255, 255, 255);
     height: auto;
 }
 .section-contents {
     margin: 0 5%;
-    background-color: rgb(185, 147, 147);
+    background-color: rgb(255, 255, 255);
     height: auto;
     position: relative;
     display: flex;
@@ -450,7 +450,7 @@ span.wb{
 /* セクションテキストエリア（skills） */
 .section-contents-skills {
     background-color: rgb(255, 255, 255);
-    margin:  75px 10% 0px;
+    margin: 75px 0px;
     width: 338px;
     height: auto;
 }
@@ -565,7 +565,7 @@ ______________________________ */
 .skills-section-softskills {
     width: 100%;
     padding: 42px 0px;
-    background-color: rgb(29, 110, 76);
+    background-color: rgb(255, 255, 255);
     display: inline-block;
 }
 .softskills-cards {
@@ -574,7 +574,7 @@ ______________________________ */
     /* 範囲：marginで外余白との位置関係を決める（autoで左右に5％づつ分かれる） */
     margin: 0 auto;
     /* 自体：そのもののwidthやheight背景色を決める */ 
-    background-color: rgb(121, 102, 102);
+    background-color: rgb(255, 255, 255);
     /* 自体：widthでなくmax-widthにすると、画面幅が小さくても指定サイズ以下で自動で縮小 */
     max-width: 338px;
     /* height: 78px;    */
@@ -585,7 +585,7 @@ ______________________________ */
     padding-inline-start: 0px;
 }
 .softskills-card {
-    background-color: #a18787;
+    background-color: #ffffff;
     list-style: none; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
 }
@@ -674,6 +674,7 @@ img.todetail:hover {
 }
 .caution {
     font-size: 8px;
+    padding-top: 8px;
 }
 .todetail {
     width: 35px;
@@ -691,6 +692,7 @@ img.todetail:hover {
 .category {
     /* ボタンの高さfontsize+pdtop+pdbtm */
     font-size: 14px;
+    font-weight: 300;
     list-style: none;
     color: #232323;
     padding: 8px 28px;
@@ -745,8 +747,8 @@ img.todetail:hover {
 .footer-categories {
     width: 90%;
 }
-footer>div>ul>li {
-    font-size: 14px;
+.footer_inner>ul>li {
+    font-size: 16px;
     font-weight: 300;
     font-style: italic;
     padding-top: 20px;
@@ -755,6 +757,7 @@ footer>div>ul>li {
     display: flex;
     position: relative;
     vertical-align: middle;
+    font-weight: 300;
 }
 .img_logo, logo>p {
     width: 8%;
@@ -762,12 +765,13 @@ footer>div>ul>li {
     margin-right: 6px;
     vertical-align: middle;
 }
-.totop {
+#totop {
     position: absolute;
-    bottom: 95px;
+    bottom: 108px;
     right: 1%;
     width: 12%;
     position: fixed;
+    transform: rotate(180deg);
 }
 .totop:hover {
     cursor: pointer;

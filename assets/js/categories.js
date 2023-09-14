@@ -132,8 +132,40 @@ iconDowns.forEach((iconDown) => {
     });
 });
 
-//カテゴリリストの右端余白の設定
-// JavaScriptで右端の要素を特定
-// categoryクラスを持つ要素を取得
+//totopボタンの出現のタイミングを設定
+// トップへ戻るボタンを取得
+var toTopBtn = document.getElementById("totop");
 
+// ボタンを非表示にする関数
+function hideToTopButton() {
+    toTopBtn.style.display = "none";
+}
 
+// ボタンを表示する関数
+function showToTopButton() {
+    toTopBtn.style.display = "block";
+}
+
+// スクロールイベントリスナーを追加
+window.addEventListener("scroll", function() {
+    // 現在のスクロール位置を取得
+    var scrollY = window.scrollY || window.pageYOffset;
+
+    // 200px 以上スクロールしたらボタンを表示、それ以外は非表示にする
+    if (scrollY >= 200) {
+        showToTopButton();
+    } else {
+        hideToTopButton();
+    }
+});
+
+// ページ読み込み時に初期状態を設定
+hideToTopButton();
+
+// ボタンをクリックしたときにトップにスクロールする処理を追加
+toTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // スムーズなスクロール効果を追加
+    });
+});
