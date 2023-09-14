@@ -111,4 +111,29 @@ slideContainer.addEventListener('mousemove', (e) => {
     slideContainer.scrollLeft = scrollLeft - walk;
 });
 
+//複数のアコーディオン、DOMトラバーサルの使用
+const iconDowns = document.querySelectorAll('.todetail');
+const iconDown = document.querySelector('.todetail');
+//iconDownの次の直下エレメントをdetailPanelにする
+
+
+//iconDownsはiconDownの繰り返し（iconDownの設定）
+iconDowns.forEach((iconDown) => { 
+    iconDown.addEventListener('click', function(){
+        // 親要素を探して、そこから次の次の要素を探す（次の要素の場合には親要素の検索は不要）
+        const parentElement = iconDown.parentElement;
+        const grandParentElement = parentElement.parentElement;
+        //次の要素の場合にはこれconst detailPanel = iconDown.nextElementSibling;
+        //親要素から.detailpanelを探す
+        const detailPanel = grandParentElement.querySelector('.detailpanel');
+        //変数への指示
+        detailPanel.classList.toggle('active');   
+        iconDown.classList.toggle('toup');
+    });
+});
+
+//カテゴリリストの右端余白の設定
+// JavaScriptで右端の要素を特定
+// categoryクラスを持つ要素を取得
+
 

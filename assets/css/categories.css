@@ -401,7 +401,8 @@ div.overbg::after { /*::afterがないとスピード増す*/
     }
 }
 
-/* セクション（ABOUT) */
+/* section_ABOUT
+============================== */
 #about-section {
     background-color: rgb(130, 148, 198);
     height: auto;
@@ -436,11 +437,22 @@ span.wb{
 .section-contents-txt-tight {
     background-color: rgb(255, 255, 255);
     margin:  75px 15% 0px;
+    height: auto;
+    width: 100%;
 }
 /* セクションテキストエリア（ワイド） */
 .section-contents-txt-wide {
     background-color: rgb(255, 255, 255);
     margin:  75px 10% 0px;
+    height: auto;
+    width: 100%;
+}
+/* セクションテキストエリア（skills） */
+.section-contents-skills {
+    background-color: rgb(255, 255, 255);
+    margin:  75px 10% 0px;
+    width: 338px;
+    height: auto;
 }
 .fadeup-one {
     animation-name:fadeUpAnime;
@@ -543,65 +555,230 @@ ______________________________ */
 }
 
 
-/* セクション（SKILLS） */
+
+/* section_SKILLS
+============================== */
+/* skills-アコーディオン */
 .skills-txt {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255); 
+    padding-left: 10%;
 }
-#skills-section {
-    background-color: rgb(216, 243, 235);
-}
-.skills-txt li::after {
-    content: " /";
-}
-.wb-all {
-    word-break: keep-all;
+.skills-section-softskills {
+    width: 100%;
+    padding: 42px 0px;
+    background-color: rgb(29, 110, 76);
+    display: inline-block;
 }
 .softskills-cards {
-    padding-top: 42px;
-    padding-bottom: 42px;
-    background-color: aquamarine;
+    /* 範囲：外余白を100%から左右各5%引いたwidth90%が決まる（この時点ではまだ左寄り） */
+    width: calc(100% - 10%);
+    /* 範囲：marginで外余白との位置関係を決める（autoで左右に5％づつ分かれる） */
+    margin: 0 auto;
+    /* 自体：そのもののwidthやheight背景色を決める */ 
+    background-color: rgb(121, 102, 102);
+    /* 自体：widthでなくmax-widthにすると、画面幅が小さくても指定サイズ以下で自動で縮小 */
+    max-width: 338px;
+    /* height: 78px;    */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    padding-inline-start: 0px;
 }
 .softskills-card {
-    padding-top: 42px;
-    height: 79px;
-    width: auto;
-    background-color: beige;
-    display: flex;
-    flex-direction: row;
-    padding:5%;
-}
-.softskills-card:first-child {
-    padding-top: 0px;
-}
-.intro-img  {
-    width: 63px;
+    background-color: #a18787;
+    list-style: none; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
 }
 .card-intro {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    height:84px;
 }
-.intro-ttl {
-    width: 170px;
-    vertical-align: center;
+.card-texts {
+    flex: 60vw;
+    padding-left: 5%;
 }
-.intro-icon {
-    padding-right: 30px;
+.detailpanel {
+    display: none;
+}
+img.todetail:hover {
+    cursor: pointer;
+}
+.active {
+    display: block ;
+}
+.toup {
+    transform: rotate(180deg);
+}
+.card-maintext {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.card-subtext {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.intro-img {
+    height: 84px;
+    width: auto;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+.detailpanel-inner {
+    padding: 24px 5%;
+    width: 250px;
+    margin: 0 auto;
+}
+.detailpanel-inner-text {
+    font-size: 12px;
+}
+.detailpanel-inner > ul {
+    font-size: 10px;
+    list-style-position: inside;
+    padding-left: 0px;
+}
+.detailpanel-inner-imgs > img {
+    width: 120px;
+    height: 90px;
+    object-fit: none;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.detailpanel-inner-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+/* テスト中の白色背景ON */
+.softskills-card,
+.softskills-cards,
+.skills-section-softskills {
+    background-color: #ffffff;;
+}
+.imgcaption {
+    position: relative;
+}
+.caption {
+    font-size: 8px;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.3 );
+    position: absolute;
+    top: 75px;
+    left: 135px;
+    padding: 0 3px;
+}
+.caution {
+    font-size: 8px;
+}
+.todetail {
+    width: 35px;
 }
 
 
+/* section_WORKS
+============================== */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;    
+}
+.category {
+    /* ボタンの高さfontsize+pdtop+pdbtm */
+    font-size: 14px;
+    list-style: none;
+    color: #232323;
+    padding: 8px 28px;
+    border: #232323 0.7px solid;
+    border-radius: 9999px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.category:last-child {
+    margin-right: 0px;
+}
+.categories>a.bg-gray {
+    background-color: #F0F0F0;
+}
+.category:hover {
+    cursor: pointer;
+    background-color: #232323;
+    color: #fff;
+}
+.categories>a.bg-gray:hover {
+    cursor: pointer;
+    background-color: #232323;
+    color: #fff;
+}
+.work {
+    width: 310px;
+    height: auto;
+    background-color: aquamarine;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.work:last-child {
+    margin-bottom: 0px;
+}
+.imgdiv {
+    width: 310px;
+    height: 233px;
+    background-color: #e3cbcb;
+    text-align: center;
+    margin: 0 auto;
+}
+ 
 
+/* footer */
+.footer_inner {
+    margin-top: 120px;
+    padding: 5%;
+    background-color: #F0F0F0;
+    position: relative;
+}
+.footer-categories {
+    width: 90%;
+}
+footer>div>ul>li {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 20px;
+}
+.logo {
+    display: flex;
+    position: relative;
+    vertical-align: middle;
+}
+.img_logo, logo>p {
+    width: 8%;
+    height: 8%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.totop {
+    position: absolute;
+    bottom: 95px;
+    right: 1%;
+    width: 12%;
+    position: fixed;
+}
+.totop:hover {
+    cursor: pointer;
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.copy {
+    font-size: 10px;
+    color: #fff;
+    background-color: #232323;
+    padding-left: 0px;
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+}
