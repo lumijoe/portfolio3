@@ -67,6 +67,13 @@ ______________________________ */
 .fw-500 {
     font-weight: 500;
 }
+.fw-600 {
+    font-weight: 600;
+}
+.fw-bold {
+    font-weight: bold;
+}
+
 /* lineheight */
 .lh-1 {
     line-height: 1;
@@ -729,7 +736,7 @@ img.todetail:hover {
 .work {
     width: 310px;
     height: auto;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     margin: 0 auto;
     margin-bottom: 60px;
 }
@@ -742,6 +749,7 @@ img.todetail:hover {
     background-color: #e3cbcb;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 12px;
 }
  
 
@@ -793,4 +801,10 @@ img.todetail:hover {
     padding: 15px;
     text-align: center;
     font-style: italic;
+}
+
+/* work */
+.work_img {
+    max-width: 310px;
+    height: auto;
 }
