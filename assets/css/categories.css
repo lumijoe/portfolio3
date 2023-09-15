@@ -64,6 +64,9 @@ ______________________________ */
 .fw-300 {
     font-weight: 300;
 }
+.fw-500 {
+    font-weight: 500;
+}
 /* lineheight */
 .lh-1 {
     line-height: 1;
@@ -79,6 +82,9 @@ ______________________________ */
 }
 .fs-l {
     font-size: 14px;
+}
+.fs-l-en {
+    font-size: 16px;
 }
 .fs-s {
     font-size: 10px;
@@ -443,7 +449,7 @@ span.wb{
 /* セクションテキストエリア（ワイド） */
 .section-contents-txt-wide {
     background-color: rgb(255, 255, 255);
-    margin:  75px 10% 0px;
+    margin:  75px 4% 0px;
     height: auto;
     width: 100%;
 }
@@ -611,8 +617,6 @@ img.todetail:hover {
     transform: rotate(180deg);
 }
 .card-maintext {
-    font-size: 16px;
-    font-weight: bold;
     margin-bottom: 0px;
 }
 .card-subtext {
@@ -632,11 +636,14 @@ img.todetail:hover {
 }
 .detailpanel-inner-text {
     font-size: 12px;
+    line-height: 2;
+    padding-top: 24px;
 }
 .detailpanel-inner > ul {
     font-size: 10px;
     list-style-position: inside;
     padding-left: 0px;
+    margin: 24px 0;
 }
 .detailpanel-inner-imgs > img {
     width: 120px;
@@ -675,6 +682,7 @@ img.todetail:hover {
 .caution {
     font-size: 8px;
     padding-top: 8px;
+    padding-bottom: 24px;
 }
 .todetail {
     width: 35px;
